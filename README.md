@@ -1,3 +1,3 @@
-Vocabulary
-Add Word Form
-Trening Words
+<p>Vocabulary</p>
+<p>Add Word Form</p>
+<p>Trening Words</p>
