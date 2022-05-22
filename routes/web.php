@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\VocabularController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +18,16 @@ use App\Http\Controllers\DashboardController;
 |
 */
 
-Route::get('/', [DashboardController::class, 'index'])
+Route::get('/', [VocabularController::class, 'index'])
     ->name('dashboard')
     ->middleware('guest');
+
+Route::get('/vocabulary/trening', [VocabularController::class, 'trening'])
+    ->name('vocabulary.trening');
+
+Route::post('/vocabulary/{id}/check', [VocabularController::class, 'check_word'])
+    ->name('vocabulary.check-word');
+
+Route::resource('vocabulary', VocabularController::class);     
 
 require __DIR__.'/auth.php';

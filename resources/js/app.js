@@ -3,7 +3,7 @@ require('./bootstrap');
 import { createApp, h } from 'vue';
 import { createInertiaApp, Link } from '@inertiajs/inertia-vue3';
 import { InertiaProgress } from '@inertiajs/progress';
-//import Toaster from "@meforma/vue-toaster";
+import Toaster from "@meforma/vue-toaster";
 
 const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'Laravel';
 
@@ -17,7 +17,7 @@ createInertiaApp({
         return createApp({ render: () => h(app, props) })
             .component('inertia-link', Link)
             .use(plugin)
-            // .use(Toaster)
+            .use(Toaster)
             .mixin({ methods: { route } })
             .mount(el);
     },
