@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-col justify-center items-center pt-10 my-5 text-center relative bg-white rounded-2xl">
-        <h3 class="font-bold text-gray-700 text-3xl font-archivo">Add New Word</h3>
+        <h3 class="font-bold text-gray-700 text-3xl font-archivo">Add New Word or Phrase</h3>
         <Link :href="route('vocabulary.index')" class="rounded bg-gray-800 text-white font-archivo px-2">Vocabulary</Link>
         <div class="p-4 flex flex-row flex-wrap gap-6 justify-center items-center w-96">
             <form @submit.prevent="store()" class="flex flex-col w-full">     
